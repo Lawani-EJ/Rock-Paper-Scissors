@@ -4,7 +4,7 @@ Here's the updated `README.md` with an added header image section and emojis for
 
 # Rock, Paper, Scissors Game 🎮✂️📜🪨
 
-![Rock Paper Scissors Game Screenshot](./assets/rock-paper-scissors.png)
+![Rock Paper Scissors Game Screenshot](./assets/RPS.gif)
 
 A fun and interactive **Rock, Paper, Scissors** game built with HTML, CSS, and JavaScript! Compete against the computer and see if you can win. Let's play! ✨
 
@@ -51,6 +51,8 @@ Follow these steps to get a local copy up and running:
 4. Run the game by opening `index.html` in your browser.
 
 ### 🕹️ Usage
+
+![Rock Paper Scissors Game Screenshot](./assets/RockPaperScissors-Opera2024-11-1117-49-36-ezgif.com-video-to-gif-converter.gif)
 
 1. Open the game in your browser.
 2. Choose one of the three buttons: **Rock**, **Paper**, or **Scissors**.
