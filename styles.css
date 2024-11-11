@@ -1,78 +1,151 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;1,700&family=PT+Sans&display=swap');
+
 body {
-  background-color: #41B3a3;
+  background: linear-gradient(135deg, #1E1E1E, #2C2C2C);
+  color: #E0E0E0;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'PT Sans', sans-serif;
 }
+
+h3#title-small {
+  text-align: center;
+  font-size: 2em;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  color: #FF6B6B;
+  margin: 1em 0;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 8px rgba(255, 107, 107, 0.4);
+}
+
 .main-container {
   width: 40vw;
   height: 70vh;
-  margin: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto auto auto;
   justify-content: center;
+  gap: 1em;
+  padding: 1.5em;
+  background: #333;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease-in-out;
 }
-.title-small-wrapper {
-  background-color: aqua;
-}
-h3 {
-  size: 1em;
-  font-family: 'Josefin Sans', sans-serif;
-  font-weight: lighter;
-  color: white;
-}
+
 .status-head-wrapper {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 2;
+  grid-column: 1 / -1;
+  grid-row: 2;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-around;
+  padding-top: 1em;
 }
+
 .status-head-wrapper h1 {
   font-family: 'PT Sans', sans-serif;
-  font-size: 8em;
-  margin-bottom: auto;
-  color: white;
-}
-.game-button-wrapper {
-  grid-row-start: 3;
-  grid-column: 1/span 4;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-around;
-}
-button {
-  margin-top: auto;
-  color: #FFF;
+  font-size: 5em;
+  color: #FF6B6B;
   margin: 0;
-  background-color: #208376;
-  border: 2px solid rgba(255, 255, 255, 0);
-  position: relative;
-  border-radius: 0px;
-  padding: 1.5em 3em;
-  display: inline-block;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 10px rgba(255, 107, 107, 0.6);
+}
+
+.move-display {
+  grid-row: 3;
+  grid-column: 1 / -1;
+  color: #E0E0E0;
+  font-family: 'PT Sans', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.game-button-wrapper {
+  grid-row: 4;
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1em;
+  padding-top: 1em;
+}
+
+button {
+  color: #FFF;
+  background-color: #FF6B6B;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 1em 1.5em;
   font-family: "Lucida Console", Monaco, monospace;
   font-size: 1em;
   letter-spacing: 1px;
   cursor: pointer;
-  margin-left: 1em;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
 }
+
+button#rock-button::before {
+  content: "✊🏿 ";
+}
+
+button#paper-button::before {
+  content: "✋🏿 ";
+}
+
+button#scissors-button::before {
+  content: "✌🏿 ";
+}
+
 button:hover,
 button:active {
-  border: 2px solid rgb(255, 255, 255);
+  border-color: #FF6B6B;
+  background-color: #FF4C4C;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(255, 107, 107, 0.5);
 }
-.move-display {
-  grid-row-start: 4;
-  grid-column: 1/span 4;
-  color: white;
-  font-family: 'PT Sans', sans-serif;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-around;
-}
+
 @media (max-width: 1000px) {
   .main-container {
     width: 80vw;
+    padding: 1em;
+  }
+
+  .status-head-wrapper h1 {
+    font-size: 3.5em;
+  }
+
+  button {
+    font-size: 0.9em;
+    padding: 1em 1.2em;
+  }
+
+  .move-display {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 600px) {
+  .status-head-wrapper h1 {
+    font-size: 3em;
+  }
+
+  h3#title-small {
+    font-size: 1.5em;
+  }
+
+  button {
+    padding: 0.8em 1em;
+    font-size: 0.8em;
   }
 }
