@@ -70,9 +70,17 @@ The game logic is managed through JavaScript functions that process the player's
 ### 🔍 Main Functions
 
 - **`startGame()`**: Initializes the game with "Rock," "Paper," and "Scissors" buttons, prompting the player to choose.
+![image](https://github.com/user-attachments/assets/7fd5aa16-ac88-4103-9098-fbf8218fbc17)
+
 - **`endGame(event)`**: Triggered by a player's choice, this function calculates the result based on the player’s and computer's moves and displays it.
+![image](https://github.com/user-attachments/assets/70a3af58-26b5-41eb-998c-90457f5bbb49)
+
 - **`calcResult(move1, move2)`**: Compares the player’s and computer’s moves to determine if it’s a win, loss, or tie.
+![image](https://github.com/user-attachments/assets/3a42ae1e-486a-4ca5-8bd2-a76eae516003)
+
 - **`randomMove()`**: Generates a random number between 0 and 2 to simulate the computer's move.
+ ![image](https://github.com/user-attachments/assets/7d72854f-d2fc-4d62-9931-3628a819f52a)
+
 
 ## 📂 Project Structure
 
